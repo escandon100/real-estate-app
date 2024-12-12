@@ -1,0 +1,45 @@
+.searchbar{
+    .type{
+        button{
+            padding: 16px 36px;
+            border: 1px solid grey;
+            border-bottom: none;
+            background-color: white;
+            cursor: pointer;
+            &.active{
+                background-color: black;
+                color: white;
+            }
+            &:first-child{
+                border-top-left-radius: 5px;
+                border-right: none;
+            }
+            &:last-child{
+                border-top-right-radius: 5px;
+            }
+        }
+       
+    }
+    form{
+        display: flex;
+        height: 64px;
+
+        input{
+            border: 1px solid #9999;
+            width: 200px;
+            padding: 0px 10px;
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            background-color: #fece51;
+
+            img{
+                width: 24px;
+                height : 24px;
+            }
+        }
+        
+
+    }
+}

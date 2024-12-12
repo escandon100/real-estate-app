@@ -1,0 +1,137 @@
+@import "../../styles/responsiveness";
+
+@mixin responsiveIcon{
+    height: 36px;
+    width : 36px;
+    cursor: pointer;
+}
+nav{
+
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    a{
+        transition: all 0.4s ease;
+
+        &:hover{
+            scale: 1.05;
+        }
+      
+
+        @include small{
+            display: none;
+        }
+
+    
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        flex: 3;
+        .logo{
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        span{
+            @include medium {
+                display : none;
+            }
+        }
+    }
+
+    .right{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #f38262;
+        height: inherit;
+
+        @include medium {
+            background-color: transparent;
+        }
+
+        a{
+            padding: 12px 24px;
+            margin-right: 20px;
+        }
+
+        .register{
+            background-color: #fece51;
+        }
+        
+        .menuIcon{
+           display: none;
+            img{
+                @include responsiveIcon() 
+
+            }
+            @include small{
+                
+                transition: all 4s linear;
+
+                &.deactivate{
+                    display: none;
+                }
+                &.active{
+                    display: inline;
+                    z-index: 999;
+                }
+
+            }
+        }
+        .cancelIcon{
+            display: none;
+            img{
+               @include responsiveIcon()
+            }
+            @include small {
+                
+                &.deactivate{
+                    display: none;
+                }
+                &.active{
+                    display: inline;
+                    z-index: 999;
+                }
+            }
+
+
+        }
+
+        .menu{
+            position: absolute;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            width: 50%;
+            top: 0;
+            right: -50%;
+            transition: all 1s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            &.active{
+                right: 0;
+            }
+
+            a{
+                @include small {
+                    display: inline;
+                }
+            }
+
+         
+        }
+    }
+
+}
