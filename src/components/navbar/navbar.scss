@@ -11,6 +11,8 @@ nav{
     justify-content: space-around;
     height: 100px;
     align-items: center;
+    
+    
     a{
         transition: all 0.4s ease;
 
@@ -22,6 +24,11 @@ nav{
         @include small{
             display: none;
         }
+        @include large{
+            font-size: 20px;
+        }
+
+    
 
     
     }
@@ -29,8 +36,19 @@ nav{
     .left{
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap: 37.6px;
         flex: 3;
+
+        a{
+            @include large{
+                &:nth-child(5){
+                    padding-right: 50px;
+                }
+
+            }
+           
+        }
+       
         .logo{
             font-weight: bold;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,6 +56,20 @@ nav{
             display: flex;
             align-items: center;
             gap: 10px;
+
+            img{
+                height: 50px;
+
+                @include small{
+                    height: 50px;
+                }
+                @include medium{
+                    height: 50px;
+                }
+            }
+         
+         
+         
         }
         span{
             @include medium {
@@ -53,15 +85,21 @@ nav{
         justify-content: flex-end;
         background-color: #f38262;
         height: inherit;
+       
 
         @include medium {
+            background-color: transparent;
+        }
+        @include small{
             background-color: transparent;
         }
 
         a{
             padding: 12px 24px;
             margin-right: 20px;
+       
         }
+
 
         .register{
             background-color: #fece51;
@@ -119,7 +157,8 @@ nav{
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 16px;
+            
             &.active{
                 right: 0;
             }

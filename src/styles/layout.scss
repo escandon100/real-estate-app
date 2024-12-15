@@ -3,7 +3,7 @@
 
 .layout{
     
-    background: rgb(144, 118, 170);
+    // background: rgb(144, 118, 170);
     height: 100vh;  
     padding-left: 20px;
     padding-right: 20px;
@@ -11,13 +11,13 @@
     flex-direction: column;
     
     @include small{
-        background:rgb(235, 178, 178);
+        // background:rgb(235, 178, 178);
     };  
     @include medium {
-        background: rgb(178, 198, 235);
+        // background: rgb(178, 198, 235);
     }
     @include large {
-        background: rgb(226, 194, 182);
+        // background: rgb(226, 194, 182);
       
     }
     .content{

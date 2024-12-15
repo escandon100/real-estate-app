@@ -1,6 +1,7 @@
 import React from 'react'
 import "./homepage.scss";
 import SearchBar from '../../components/searchbar/searchbar';
+import Experience from '../../components/experience/experience';
 
 const Homepage = () => {
   return (
@@ -12,20 +13,8 @@ const Homepage = () => {
             Dignissimos non rerum voluptatibus possimus minima quam error delectus laborum perspiciatis eveniet facere, consequatur saepe dolor.
           </p>
            <SearchBar/>
-          <div className="boxes">
-            <div className="box">
-              <h1>16+</h1>
-              <h2>Years of experience</h2>
-            </div>
-            <div className="box">
-              <h1>200</h1>
-              <h2>Award Gained</h2>
-            </div>
-            <div className="box">
-              <h1>1200+</h1>
-              <h2>Property Ready</h2>
-            </div>
-          </div>
+           <Experience/>
+          
         </div>
         </div>
        <div className='imgContainer'><img src="bg.png" alt="" /></div>
