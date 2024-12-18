@@ -9,6 +9,7 @@
     flex-direction: column;
     .content{
         flex: 1;
+        height: calc(100vh - 100px);
 
     }
 
