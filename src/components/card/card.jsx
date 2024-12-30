@@ -38,12 +38,10 @@ const Card = ({item}) => {
               <img src="/chat.png" alt="" />
             </div>
           </div>
-
         </div>
       </div>
 
     </div>
   )
 }
-
 export default Card
