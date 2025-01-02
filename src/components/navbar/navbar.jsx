@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router'
 import "./navbar.scss"
 const Navbar = () => {
+  const user = true
   const [open,setOpen] = useState(false)
   return (
     <nav>
@@ -15,6 +17,20 @@ const Navbar = () => {
           <a href="/">Agents</a>
         </div>
         <div className='right'>
+          {user ? (<div className='user'>
+            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+            <span>John Doe</span>
+            <Link className='profile' to = "/profile">
+              <div className="notification">3</div>
+              <span>Profile</span>
+            </Link>
+
+          </div>) : (
+            <>
+              <a href="/">Sign In</a>
+              <a href="/" className='register'>Sign Up</a>
+            </>
+          )}
           <div className={open ? "menuIcon deactivate" : "menuIcon active"}>
             <img  src="menu.png" alt="" onClick={ () => {
               setOpen(true) } } />
@@ -32,8 +48,7 @@ const Navbar = () => {
             <a href="/">Sign In</a>
             <a href="/">Sign Up</a>
           </div>
-          <a href="/">Sign In</a>
-          <a href="/" className='register'>Sign Up</a>
+         
         </div>
 
       
